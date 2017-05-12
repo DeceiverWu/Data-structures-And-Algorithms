@@ -78,7 +78,7 @@ void Delete(ElementType X, List L){
 
 	P = FindPrevious(X, L);
 
-	if(!IsLast(P, L)){
+	if(!IsLast(P)){
 		TmpCell = CursorSpace[P].Next;
 		CursorSpace[P].Next = CursorSpace[TmpCell].Next;
 		CursorFree(TmpCell);
@@ -121,7 +121,7 @@ void TraverseList(List L){
 	P = CursorSpace[L].Next;
 
 	if(IsEmpty(L))
-		cout << "List is Empty!!!" << end;
+		cout << "List is Empty!!!" << endl;
 	else{
 		while(P){
 			cout << CursorSpace[P].Element << endl;

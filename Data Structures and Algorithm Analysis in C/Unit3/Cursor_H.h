@@ -1,8 +1,6 @@
 #ifndef _Cursor_H
 #define _Cursor_H
 
-const size_t SpaceSize = 20;
-
 typedef int ElementType;
 typedef int PtrToNode;
 typedef PtrToNode List;
