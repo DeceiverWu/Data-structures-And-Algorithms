@@ -65,7 +65,7 @@ ElementType Top(Stack S){
 	return 0;
 }
 
-//返回栈顶元素并从栈中删除
+//删除栈顶元素，这个我也是觉得有点鸡肋，用下面Pops代替
 void Pop(Stack S){
 	PtrToNode FirstCell;
 
@@ -75,6 +75,22 @@ void Pop(Stack S){
 		FirstCell = S->Next;
 		S->Next = FirstCell->Next;
 		free(FirstCell);
+	}
+}
+
+//返回栈顶元素并且删除
+ElementType Pops(Stack S){
+	PtrToNode FirstCell;
+	ElementType tmp;
+
+	if(IsEmpty(S))
+		printf("Empty Stack\n");
+	else{
+		FirstCell = S->Next;
+		S->Next = FirstCell->Next;
+		tmp = FirstCell->Element;
+		free(FirstCell);
+		return tmp;
 	}
 }
 
@@ -92,9 +108,13 @@ int main(void)
 	}
 	printf("\n下面按照顺序弹出栈中所有元素并输出:\n");
 	
+    //for(i = 0 ; i < 10 ; i++){
+    //	printf("第%2d个出栈的是%4d \n", i+1, SHead->Next->Element);
+    //	Pop(SHead);        
+    //}
+
     for(i = 0 ; i < 10 ; i++){
-    	printf("第%2d个出栈的是%4d \n", i+1, SHead->Next->Element);
-    	Pop(SHead);        
+    	printf("第%2d个出栈的是%4d \n", i+1, Pops(SHead));
     }
 
 	return 0;
