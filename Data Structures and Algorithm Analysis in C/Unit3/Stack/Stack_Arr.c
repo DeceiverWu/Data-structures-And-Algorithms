@@ -92,7 +92,7 @@ int main(void)
 	Stack s;
 	int stackSize, topDate, temp, i;
 
-	stackSize = 5;
+	stackSize = 10;
 	s = CreateStack(stackSize);
 
 	printf("随机生成10个数：\n");

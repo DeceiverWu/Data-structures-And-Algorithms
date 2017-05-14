@@ -9,15 +9,15 @@ struct Node
 	Position Next;
 };
 
-int IsEmpty(List *L){
+int IsEmpty(List L){
 	return L->Next == NULL;
 }
 
-int IsLast(Position *P,List *L){
+int IsLast(Position P,List L){
 	return P->Next == NULL;
 }
 
-Position Find(int X, List *L){
+Position Find(int X, List L){
 	Position P;
 
 	P = L->Next;
@@ -28,7 +28,7 @@ Position Find(int X, List *L){
 	return P;
 }
 
-Position FindPrevious(int X, List *L){
+Position FindPrevious(int X, List L){
 	Position P;
 
 	P = L;
@@ -40,7 +40,7 @@ Position FindPrevious(int X, List *L){
 }
 
 //插入链表尾
-void Inserts(int X, List *L){
+void Inserts(int X, List L){
 	Position P,TemCell;
 
 	P = L;
@@ -55,7 +55,7 @@ void Inserts(int X, List *L){
 
 //如果不存在X，则什么都不做
 //P为要删除结点的前置结点
-void Delete(int X,List *L){
+void Delete(int X,List L){
 	Position P, TemCell;
 
 	P = FindPrevious(X, L);
@@ -66,7 +66,7 @@ void Delete(int X,List *L){
 	}
 }
 
-void DeleteList(List *L){
+void DeleteList(List L){
 	Position P,TemCell;
 
 	P = L->Next;
@@ -81,7 +81,7 @@ void DeleteList(List *L){
 	}
 }
 
-//要测试函数，自己套路，函数原型在文件List_H.h中
+//要测试函数，自己套路，函数原型在文件List_H.h中, 部分函数未实现
 int main(void)
 {
 
