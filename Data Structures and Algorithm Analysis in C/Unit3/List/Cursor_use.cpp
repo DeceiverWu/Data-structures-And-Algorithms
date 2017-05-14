@@ -130,7 +130,8 @@ void TraverseList(List L){
 	}
 }
 
-int main(void){
+int main(void)
+{
 	int i, m;
 	int data,data_find,data_delete;   
     Position P,LHead;  
