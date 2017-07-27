@@ -1,3 +1,4 @@
+//数据结构与算法分析——C语言描述 习题1.2
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -76,7 +77,7 @@ int main()
 	for(int row = 0; row < SIZE; row++){	//坐标轴:x
 		for(int col = 0; col < SIZE; col++){	//坐标轴:y
 			for(int dir = 0; dir < 8; dir++){	//dir:搜索方向
-				for(int cnum = 1; n <= 4; cnum++){	//cnum表示字符数
+				for(int cnum = 1; cnum <= 4; cnum++){	//cnum表示字符数
 					if(isExist(row, col, dir, cnum, word)){
 						printf("%s\n", word);
 						break;
@@ -87,5 +88,5 @@ int main()
 	}
 
 	system("pause");
-    return 0
+    return 0;
 }
