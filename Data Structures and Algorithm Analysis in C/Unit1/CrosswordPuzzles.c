@@ -1,4 +1,5 @@
 //数据结构与算法分析——C语言描述 习题1.2
+//编写一个程序求解字谜游戏
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

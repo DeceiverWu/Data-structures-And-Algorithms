@@ -1,4 +1,5 @@
 //数据结构与算法分析——C语言描述 习题1.3
+//只使用处理I/O的PrintDigit函数，编写一个过程以输出任意实数
 #include <stdio.h>
 
 #define PrintDigit(ch) (putchar(ch + '0'))
