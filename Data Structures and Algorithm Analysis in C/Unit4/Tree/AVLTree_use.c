@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include "AVLTree.h"
 
 struct AvlNode{
@@ -156,7 +157,7 @@ AvlTree Insert(ElementType x, AvlTree t)
 
 AvlTree Delete(ElementType x, AvlTree t)
 {
-
+	//待coding...
 }
 
 ElementType Retrieve(Position p)
@@ -164,6 +165,18 @@ ElementType Retrieve(Position p)
 	return p->element;
 }
 
+int main()
+{
+	AvlTree tree = NULL;
 
+	for(int i = 0; i < 100; i++){
+		tree = Insert(rand()%100, tree);
+	}
+
+	printf("%d\n", tree->height);
+
+	tree = MakeEmpty(tree);
+	return 0;
+}
 
 
