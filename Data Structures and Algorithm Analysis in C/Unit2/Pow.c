@@ -32,3 +32,19 @@ long int Pows(long int X, unsigned int N){
 	else
 		return Pows(X, N - 1) * X;
 }
+
+/*
+*非递归快速求幂
+*/
+long int PowNotRecursion(long int X, unsigned int N){
+	long pow = 1;
+
+	while(N > 0){
+		if(N & 1)
+			pow *= X;
+		X *= X;
+		N >>= 1;
+	}
+
+	return pow;
+}
