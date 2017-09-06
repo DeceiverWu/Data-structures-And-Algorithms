@@ -43,7 +43,7 @@ int isEmpty(List L)
 	return L->Next == NULL;
 }
 
-int isLast(Position P, List L)
+int isLast(Position P)
 {
 	return P->Next == NULL;
 }
@@ -120,6 +120,7 @@ Position First(List L);
 	return L->Next;
 }
 
+//这个可以考虑做成类Java迭代next()的效果，维护一个Position记录每次迭代的位置
 Position Advance(Position P);
 {
 	return P->Next;
@@ -128,4 +129,11 @@ Position Advance(Position P);
 ElementType Retrieve(Position P)
 {
 	P->Element;
+}
+//删除下一个结点
+void deleteNext(Position P)
+{
+	Position tmpCell = p->Next;
+	p->Next = tmpCell->Next;
+	free(tmpCell);
 }

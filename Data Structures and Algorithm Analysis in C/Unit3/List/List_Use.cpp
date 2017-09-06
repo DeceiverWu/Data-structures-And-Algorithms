@@ -81,7 +81,28 @@ void DeleteList(List L){
 	}
 }
 
-//要测试函数，自己套路，函数原型在文件List_H.h中, 部分函数未实现
+Position Header(List L)
+{
+	return L;
+}
+
+//头结点不存放任何数据
+Position First(List L);
+{
+	return L->Next;
+}
+
+Position Advance(Position P);
+{
+	return P->Next;
+}
+
+int Retrieve(Position P)
+{
+	P->Element;
+}
+
+//要测试函数，自己套路，函数原型在文件List_H.h中
 int main(void)
 {
 

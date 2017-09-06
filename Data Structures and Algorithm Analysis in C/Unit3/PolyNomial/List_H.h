@@ -14,7 +14,7 @@ typedef PtrToNode Position;
 List CreateList();
 List MakeEmpty(List L);
 int isEmpty(List L);
-int isLast(Position P, List L);
+int isLast(Position P);
 void Delete(ElementType X, List L);
 void Insert(ElementType X, Position P);
 void DeleteList(List L);
@@ -24,5 +24,6 @@ Position Header(List L);
 Position First(List L);
 Position Advance(Position P);
 ElementType Retrieve(Position P);
+void deleteNext(Position P);
 
 #endif
