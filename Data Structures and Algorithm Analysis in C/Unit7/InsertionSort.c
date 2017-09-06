@@ -29,7 +29,7 @@ void Insertion_Sort_v2(const int *arr, int N)
 	for(i = 1; i < N; i++){
 		tmp = arr[i];
 		//循环条件直接判断比值，不成立则中止循环
-		for(j = i; j > 0 && arr[j] < arr[j - 1]; j--)
+		for(j = i; j > 0 && tmp < arr[j - 1]; j--)
 			arr[j] = arr[j - 1];
 
 		arr[j] = tmp;
